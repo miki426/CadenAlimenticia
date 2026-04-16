@@ -1,0 +1,593 @@
+/* ESTILOS GENERALES Y RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* PÁGINA 1: DISEÑO ESPECÍFICO (FLEXBOX PARA COPIAR REFERENCIA) */
+#pagina1 {
+    display: flex; /* Activa Flexbox para dos columnas */
+    background-color: #ffffff;
+    align-items: center; /* Centra verticalmente */
+}
+
+.hero-left {
+    flex: 1; /* Ocupa el 50% izquierdo */
+    padding: 0 10%;
+    text-align: left;
+}
+
+.marca {
+    font-size: 3.5rem;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.lema {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.hero-right {
+    flex: 1; /* Ocupa el 50% derecho */
+    height: 100vh;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformar */
+}
+
+/* PÁGINA 2: Filosofía */
+#pagina2 {
+    background-color: #f7f7f7;
+    padding: 100px 0;
+}
+
+.container-full {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.title-left {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#pagina2 p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* PÁGINA 3: Nuestro Compromiso (ALINEACIÓN MANUAL SIN FLEXBOX) */
+#pagina3 {
+    background-color: #ffffff;
+    padding: 100px 0;
+    text-align: center; /* Centra el título H2 */
+}
+
+#pagina3 h2 {
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+.compromiso-container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: right; /* Empuja el grupo hacia la derecha de la pantalla */
+    font-size: 0; /* Mata espacios fantasma entre inline-blocks */
+}
+
+.card {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%; /* Ancho calculado para 3 columnas */
+    margin-left: 2%; /* Espacio entre tarjetas */
+    padding: 35px 25px;
+    background: linear-gradient(180deg, #e6e9f5 0%, #f4f6fb 100%); /* Degradado suave */
+    border: 1px solid #d8dceb;
+    border-radius: 20px;
+    text-align: left; /* El texto vuelve a alinearse a la izquierda */
+    font-size: 16px; /* Restauramos el tamaño de fuente */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.icon-circle {
+    width: 65px;
+    height: 65px;
+    background-color: #4a59bd;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    text-align: center;
+    line-height: 70px;
+}
+
+/* Estilo específico para el tercer bloque (borde blanco como pediste) */
+.azul-blanco {
+    background-color: #2196f3;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 1px #2196f3;
+}
+
+.icon-circle svg {
+    width: 35px;
+    height: 35px;
+    fill: white;
+    vertical-align: middle;
+}
+
+.negritas {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.card p {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* PÁGINA 4: ¿Por Qué Elegir Ropa de Segunda Mano? (Alineación Manual Inline-Block) */
+#pagina4 {
+    background-color: #f7f7f7;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#pagina4 h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+.container-centered {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0; /* Truco para inline-block */
+}
+
+.container-right {
+    text-align: right; /* Desplaza el grupo hacia la derecha */
+}
+
+.item-beneficio {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Ancho calculado para 3 columnas */
+    margin-left: 3%; /* Espacio entre items */
+    text-align: center; /* Centra el texto de adentro */
+    font-size: 16px;
+}
+
+.item-beneficio img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.negritas-s {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.item-beneficio p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.4;
+}
+/* PÁGINA 5: Reutiliza estilos de .card de la página 3 */
+#pagina5 {
+    background-color: #f7f7f7;
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* PÁGINA 6: Colección e Imagen 8.png */
+#pagina6 {
+    background-color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.img-completa {
+    width: 90%;
+    max-width: 1100px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* PÁGINA 7: Cuadros de Precios */
+#pagina7 {
+    background-color: #f7f7f7;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.price-box {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-left: 3%;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border: 2px solid #020202; /* Color de marca */
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.price-box h3 {
+    font-size: 2rem;
+    color: #000105;
+    margin-bottom: 10px;
+}
+
+.footer-text-container {
+    width: 85%;
+    max-width: 900px;
+    margin: 50px auto 0;
+}
+
+.descripcion-final {
+    font-size: 1.15rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Asegurar que las secciones pares/impares mantengan ritmo visual */
+#pagina5, #pagina7 { background-color: #f9f9f9; }
+#pagina6 { background-color: #ffffff; }
+/* PÁGINA 8 - ESCALONADO */
+#pagina8 {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.escalonado-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    position: relative;
+    text-align: center;
+}
+
+.step {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Efecto escalonado ascendente */
+.step-1 { margin-top: 60px; }
+.step-2 { margin-top: 30px; }
+.step-3 { margin-top: 0px; }
+
+.search-icon {
+    font-size: 40px;
+    background: white;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid #eee;
+}
+
+/* PÁGINA 9 - SPLIT FOTO Y TEXTO */
+#pagina9 {
+    display: flex;
+    background-color: #f9f9f9;
+}
+
+.split-container {
+    display: flex;
+    width: 100%;
+}
+
+.split-left, .split-right {
+    flex: 1;
+}
+
+.img-split {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.split-right {
+    padding: 10% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-p {
+    font-size: 1.2rem;
+    margin: 20px 0 40px;
+    line-height: 1.6;
+}
+
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.check-box {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #4a59bd;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+/* PÁGINA 10 - ROSA DIFUMINADO Y CONTACTO */
+#pagina10 {
+    background: linear-gradient(180deg, #ffeef2 0%, #ffffff 100%);
+    padding: 100px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p10-content {
+    width: 100%;
+    max-width: 900px;
+}
+
+.info-blocks {
+    margin: 50px 0;
+}
+
+.contact-block {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.contact-block .icon {
+    font-size: 30px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+/* BOTONES */
+.button-group {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.btn-blue {
+    display: inline-block;
+    background-color: #4a59bd;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.btn-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: #4a59bd;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 2px solid #4a59bd;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* --- RESET Y BASES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 5%;
+    overflow: hidden;
+}
+
+h2 { font-size: 2.5rem; margin-bottom: 40px; font-weight: bold; }
+.negritas { font-weight: bold; }
+
+/* --- DISEÑO PARA PC (ESCRITORIO) --- */
+
+/* Página 1: Flexbox */
+#pagina1 { display: flex; align-items: center; background: #fff; padding: 0; }
+.hero-left { flex: 1; padding: 0 5%; }
+.hero-right { flex: 1; height: 100vh; }
+.hero-img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Páginas con bloques (3, 5, 7, 8) */
+.compromiso-container, .escalonado-container {
+    text-align: right;
+    font-size: 0;
+}
+
+.card, .price-box, .step {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    margin-left: 2%;
+    font-size: 16px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    background: #f4f6fb;
+    border: 1px solid #d8dceb;
+}
+
+/* Página 7: Ajuste de cajas de precio */
+.price-box { text-align: center; border: 2px solid #4a59bd; }
+
+/* Página 8: Escalonado */
+.step-1 { margin-top: 60px; }
+.step-2 { margin-top: 30px; }
+
+/* Página 9: Split */
+#pagina9 { display: flex; padding: 0; }
+.split-container { display: flex; width: 100%; }
+.split-left, .split-right { flex: 1; }
+.img-split { width: 100%; height: 100vh; object-fit: cover; }
+.split-right { padding: 5%; justify-content: center; display: flex; flex-direction: column; }
+
+/* Página 10: Rosa difuminado */
+#pagina10 { background: linear-gradient(180deg, #ffeef2 0%, #ffffff 100%); text-align: center; }
+.contact-block { display: flex; margin-bottom: 30px; text-align: left; max-width: 600px; margin-inline: auto; }
+
+/* --- RESPONSIVO (TABLETS Y CELULARES) --- */
+@media (max-width: 768px) {
+    
+    h2 { font-size: 1.8rem; }
+
+    /* Página 1: La imagen pasa arriba y el texto abajo */
+    #pagina1 { flex-direction: column-reverse; }
+    .hero-right { height: 40vh; width: 100%; }
+    .hero-left { padding: 40px 20px; text-align: center; }
+    .marca { font-size: 2.2rem; }
+
+    /* Bloques en cascada (Páginas 3, 5, 7, 8) */
+    .card, .price-box, .step {
+        width: 100%; /* Ocupa todo el ancho */
+        margin-left: 0;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    /* Quitar el escalonado en móvil para que no se vea chueco */
+    .step-1, .step-2 { margin-top: 0; }
+    .compromiso-container, .escalonado-container { text-align: center; }
+
+    /* Página 9: Foto arriba, texto abajo */
+    .split-container { flex-direction: column; }
+    .img-split { height: 50vh; }
+    .split-right { padding: 40px 20px; }
+
+    /* Página 10: Botones centrados */
+    .button-group { text-align: center; }
+    .btn-blue, .btn-outline { 
+        display: block; 
+        margin: 10px 0; 
+        width: 100%; 
+        text-align: center;
+    }
+
+    .contact-block { flex-direction: column; text-align: center; align-items: center; }
+    .contact-block .icon { margin-bottom: 10px; margin-right: 0; }
+}
+/* --- ANIMACIONES GENERALES --- */
+
+/* Efecto para todas las Tarjetas (Páginas 3, 5, 7, 8) */
+.card, .price-box, .step, .item-beneficio {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover, .price-box:hover, .step:hover, .item-beneficio:hover {
+    transform: translateY(-10px); /* Sube un poco la tarjeta */
+    box-shadow: 0 15px 30px rgba(74, 89, 189, 0.15); /* Sombra más profunda */
+}
+
+/* Efecto para las Imágenes (Páginas 6 y 9) */
+.img-completa, .img-split {
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.img-completa:hover {
+    filter: brightness(1.05); /* Brilla ligeramente */
+    transform: scale(1.01); /* Crece casi imperceptiblemente */
+}
+
+/* --- ANIMACIÓN DE BOTONES (Página 10) --- */
+.btn-blue, .btn-outline {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Botón Instagram (Azul) */
+.btn-blue:hover {
+    background-color: #3544a7; /* Oscurece el azul */
+    transform: scale(1.05); /* Crece un poco */
+    box-shadow: 0 5px 15px rgba(74, 89, 189, 0.4);
+}
+
+.btn-blue:active {
+    transform: scale(0.98); /* Efecto de "clic" presionado */
+}
+
+/* Botón TikTok (Transparente) */
+.btn-outline:hover {
+    background-color: #4a59bd;
+    color: white; /* Invierte colores */
+    transform: scale(1.05);
+}
+
+/* Animación de los Iconos de búsqueda (Página 8) */
+.search-icon {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.step:hover .search-icon {
+    transform: rotate(15deg) scale(1.2); /* Rota y crece con rebote */
+    color: #4a59bd;
+}
+
+/* --- ANIMACIÓN DE ENTRADA (Aparecer al cargar) --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar la animación a los títulos */
+h2 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
